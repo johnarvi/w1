@@ -7,15 +7,15 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(arr1, arr2) {
-  let output = true;
   if (arr1.length !== arr2.length) {
     return false;
   }
   for (let i = 0; i < arr1.length; i++) {
     if (typeof(arr1[i]) !== typeof(arr2[i]) || arr1[i] !== arr2[i]) {
-      output = false;
+      return false;
     }
-  } return output;
+  }
+  return true;
 };
 
 
