@@ -12,9 +12,9 @@ const countOnly = function(allItems, itemsToCount) {
   for (const item of allItems) {
     console.log(item);
     if (itemsToCount[item]) {
-      if (results[item]) {
+      if (results[item]) { // if key in results array is present ++ counter
         results[item] += 1;
-      } else {
+      } else { // else set a new key = 0;
         results[item] = 1;
       }
     }
