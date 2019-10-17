@@ -25,5 +25,13 @@ const obj = {
 };
 
 const test1 = findkey(obj, x => x.stars === 2);
-
 console.log(test1);
+
+const test2 = findkey(obj, x => x.stars === 7);
+console.log(test2);
+
+const test3 = findkey(obj, x => x.stars === 't');
+console.log(test3);
+
+const test4 = findkey(obj, x => x.stars === 1);
+console.log(test4);
