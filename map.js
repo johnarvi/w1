@@ -1,25 +1,8 @@
 // this map function takes in 2 arguments 1) array to map and 2) callback function
 // should return the altered array
 
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`✔️ ✔️ ✔️ Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`❌️❌️❌️Assertion Failed: ${arr1} !== ${arr2}`);
-  }
-};
-
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (typeof(arr1[i]) !== typeof(arr2[i]) || arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const assertArraysEqual = require('./assertArraysEqual');
+const eqArrays = require('./eqArrays');
 
 const map = function(array, callback) {
   const results = [];
@@ -43,3 +26,5 @@ const map = function(array, callback) {
 // const numbers = [1, 4, 9];
 // const roots = numbers.map(num => Math.sqrt(num));
 // assertArraysEqual(roots, [1, 2, 3]);
+
+module.exports = map;

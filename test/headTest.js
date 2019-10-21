@@ -1,10 +1,7 @@
-// const assertEqual = require('../assertEqual');
-// const head = require('../head');
-
 const assert = require('chai').assert;
 const head   = require('../head');
 
-describe("#head", () => {
+describe("return the head(first) value in an index", () => {
   it("returns 1 for [1, 2, 3]", () => {
     assert.strictEqual(head([1, 2, 3]), 1);
   });
@@ -24,3 +21,4 @@ describe("#head", () => {
     assert.strictEqual(head([]), undefined);
   });
 });
+
